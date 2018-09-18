@@ -29,78 +29,53 @@ namespace Facade_Planning
         [WebMethod(Description = "Metodo para Generar nueva Clave ante un olvido de Usuario")]
         public DataSet Get_GenerarPasswordOlvido(string semail, string snameuser)
         {
-            DataSet ds = null;
             Conexion oCoon = new Conexion();
-            ds = oCoon.ejecutarDataSet("UP_WEBSIGE_GENERACLAVEOLVIDO", semail,snameuser);
-            return ds;
+            return oCoon.ejecutarDataSet("UP_WEBSIGE_GENERACLAVEOLVIDO", semail,snameuser);
         }
 
         [WebMethod(Description = "Método para Consultar el ultimo producto registrado")]
         public DataTable Get_ObtenerIdProduct(string sProduct_Name, string sProduct_CreateBy)
         {
-            DataTable dt = null;
             Conexion oCoon = new Conexion();
-            dt = oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_OBTENER_IDPRODUCT", sProduct_Name, sProduct_CreateBy);
-            return dt;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_OBTENER_IDPRODUCT", sProduct_Name, sProduct_CreateBy);
         }
 
         [WebMethod(Description = "Método para Consultar el ultimo tipo de segmento registrado")]
         public DataTable Get_ObteneridSegmentsType(string sSegment_Type, string sSegmentType_CreateBy)
         {
-            DataTable dt = null;
             Conexion oCoon = new Conexion();
-            dt = oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_OBTENER_IDSEGMENTSTYPE", sSegment_Type, sSegmentType_CreateBy);
-            return dt;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_OBTENER_IDSEGMENTSTYPE", sSegment_Type, sSegmentType_CreateBy);
         }
 
         [WebMethod(Description = "Método para crear el gridview de los clientes asociados a un pdv")]
         public DataTable Get_CrearGrid(int ivalor)
         {
-            DataTable dt = null;
             Conexion oCoon = new Conexion();
-            dt = oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_LLENACLIEPDV", ivalor);
-            return dt;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_LLENACLIEPDV", ivalor);
         }
 
         [WebMethod(Description = "Método para Consultar el ultimo pdv registrado")]
         public DataTable Get_ObteneridPdv(string spdv_Code, string sPdv_CreateBy)
         {
-            DataTable dt = null;
             Conexion oCoon = new Conexion();
-            dt = oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_OBTENER_IDPDV", spdv_Code, sPdv_CreateBy);
-            return dt;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_OBTENER_IDPDV", spdv_Code, sPdv_CreateBy);
         }
 
         [WebMethod(Description = "Metodo para Obtener Años")]
         public DataTable Get_ObtenerYears() {
             Conexion oCoon = new Conexion();
-            DataTable dtyear = null;
-            dtyear = oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_OBTENEYEARS");
-            return dtyear;
-        
-        
-        
-        
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_OBTENEYEARS");
         }
 
         [WebMethod(Description = "Metodo para obtener los meses de un respectivo año")]
         public DataTable Get_ObtenerMeses() {
             Conexion oCoon = new Conexion();
-            DataTable dtmes = null;
-            dtmes = oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_OBTENERMESES");
-            return dtmes;
-        
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_OBTENERMESES");
         }
         [WebMethod(Description = "Metodo para obtener Mes Seleccionado")]
         public DataTable Get_obtener_Mes_Selecionado(int imes) {
             Conexion oCoon = new Conexion();
-            DataTable dtmsel = null;
-            dtmsel = oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_OBTENER_MES_SELECCIONADO", imes);
-            return dtmsel;
-        
-        
-        
-        
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_OBTENER_MES_SELECCIONADO", imes);
         }
         /// <summary>
         /// Metodo Para Obtener los Dias de Un Periodo
@@ -118,45 +93,27 @@ namespace Facade_Planning
         public DataTable Get_obtener_Dias_Periodo(int icompanyid, string scanal, int ireporte,string saño, string smes, int iperiodo)
         {
             Conexion oCoon = new Conexion();
-            DataTable dtdia = null;
-            dtdia = oCoon.ejecutarDataTable("UP_WEBXPLORA_OBTENERDIASXPERIODO", icompanyid, scanal, ireporte, saño, smes, iperiodo);
-            return dtdia;
-
-
-
-
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_OBTENERDIASXPERIODO", icompanyid, scanal, ireporte, saño, smes, iperiodo);
         }
 
         [WebMethod(Description = "Metodo para obtener la descripción del informe seleccionado")]
         public DataTable Get_ObtenerReport_Description(int iReport_Id)
         {
             Conexion oCoon = new Conexion();
-            DataTable dt = null;
-            dt = oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_OBTENER_Report_Description", iReport_Id);
-            return dt;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_OBTENER_Report_Description", iReport_Id);
         }
 
         [WebMethod(Description = "Metodo para actualizar modulos en person cuando se ha modificado el maestro de perfiles")]
         public DataTable Get_Actualiza_ModuloPerson(string sPerfil_id, string sModulo_id)
         {
             Conexion oCoon = new Conexion();
-            DataTable dt = null;
-            dt = oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_ACTUALZAMODULPERSON", sPerfil_id, sModulo_id);
-            return dt;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_ACTUALZAMODULPERSON", sPerfil_id, sModulo_id);
         }
 
         [WebMethod(Description = "Metodo para  Insertar Secciones")]
         public DataTable Get_Insertar_Sesion_User(string sname_user) {
             Conexion oCoon = new Conexion();
-            DataTable dtsesion = null;
-            dtsesion = oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_CONTROLSESION", sname_user);
-            return dtsesion;
-        
-        
-        
-        
-        
-        
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_CONTROLSESION", sname_user);
         }
         //[WebMethod(Description="Metodo para Autenticar Usuario")]
         //public EUsuario Get_ObteneAccesoUser(string sUser, string sPassw)
@@ -207,12 +164,6 @@ namespace Facade_Planning
         //    DataTable dtservice = null;
         //    dtservice = oCoon.ejecutarDataTable("UP_WEBSIGE_CLIENTE_OBTENERSERVICESACTIVOS", icompanyid);
         //    return dtservice;
-            
-        
-        
-        
-        
-        
         //}
 
         //[WebMethod(Description = "Metodo para Obtener Canales x Servicio y Cliente")]
@@ -221,82 +172,52 @@ namespace Facade_Planning
         //    DataTable dtccanal = null;
         //    dtccanal = oCoon.ejecutarDataTable("UP_WEBSIGE_CLIENTE_OBTENERCNALXSERVICIO", icodservice, icompanyid);
         //    return dtccanal;    
-       
-        
-        
-        
-        
         //}
 
         [WebMethod(Description = "Metodo para Obtener Numero de sesiones SIGE por usuario")]
 
         public DataTable Get_User_Sesion_Conteo(string susername) {
             Conexion oCoon = new Conexion();
-            DataTable dtcountuser = null;
-            dtcountuser = oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_CONTEO_SESION", susername);
-            return dtcountuser;
-        
-        
-        
-        
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_CONTEO_SESION", susername);
         }
 
         [WebMethod(Description = "Metodo para Obtener Usuarios en sesión")]
         public DataTable Get_Obtener_User_Sesion(string susername) {
             Conexion oCoon = new Conexion();
-            DataTable dtuser = null;
-            dtuser = oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_CONTROLSESION", susername);
-            return dtuser;
-        
-        
-        
-        
-        
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_CONTROLSESION", susername);
         }
 
         [WebMethod(Description = "Metodo para Eliminar la seccion de usuario cuando cierra sesion")]
         public DataTable Get_Delete_Sesion_User(string susername) {
             Conexion oCoon = new Conexion();
-            DataTable dtuserdel = null;
-            dtuserdel = oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_ELIMINASESION", susername);
-            return dtuserdel;
-        
-        
-        
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_GENERAL_ELIMINASESION", susername);
         }
 
         [WebMethod(Description = "Metodo para consultaR paises de los directores de cuenta activos en SIGE")]
         public DataTable Get_SearchCountryDirCuenta()
         {
             Conexion oCoon = new Conexion();
-            DataTable dtCountry = null;
-            dtCountry = oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_CONSULTAPAISDIRCUENTA");
-            return dtCountry;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_CONSULTAPAISDIRCUENTA");
         }
 
         [WebMethod(Description = "Metodo para consultar los directores de cuenta activos en SIGE para un país seleccionado")]
         public DataSet Get_SearchDirCuentaxPais(string sCod_Country)
         {
             Conexion oCoon = new Conexion();
-            DataSet dsDirCuenta = null;
-            dsDirCuenta = oCoon.ejecutarDataSet("UP_WEBSIGE_ADMIN_CONSULTADIRCUENTAXPAIS",sCod_Country);
-            return dsDirCuenta;
+            return oCoon.ejecutarDataSet("UP_WEBSIGE_ADMIN_CONSULTADIRCUENTAXPAIS", sCod_Country);
         }
 
         [WebMethod(Description = "Metodo para consultar los directores de cuenta activos en SIGE para un país seleccionado y que tienen asignacion de personal ejecutivo de cuenta")]
         public DataTable Get_SearchDirCuentaconAsingacion(string sCod_Country)
         {
             Conexion oCoon = new Conexion();
-            DataTable dtDirCuenta = null;
-            dtDirCuenta = oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_CONSULTADIRCUENTACONASIGNACION", sCod_Country);
-            return dtDirCuenta;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_ADMIN_CONSULTADIRCUENTACONASIGNACION", sCod_Country);
         }
 
         [WebMethod(Description = "Metodo para consultar los ejecutivos de cuenta activos en SIGE para un país seleccionado y que no estan asignados a un director de cuenta")]
         public DataSet Get_SearchEjeCuentaxPais(string sCod_Country)
         {
             Conexion oCoon = new Conexion();
-
             return oCoon.ejecutarDataSet("UP_WEBSIGE_ADMIN_CONSULTAEJECUTIVOCUENTAXPAIS", sCod_Country);;
         }
 
@@ -310,19 +231,13 @@ namespace Facade_Planning
         public DataSet Get_DivPolitica(string scod_Country)
         {
             Conexion oCoon = new Conexion();
-
-            DataSet dsDivPolitica = null;
-            dsDivPolitica = oCoon.ejecutarDataSet("UP_WEBSIGE_DIVISIONCOUNTRY", scod_Country);
-            return dsDivPolitica;
+            return oCoon.ejecutarDataSet("UP_WEBSIGE_DIVISIONCOUNTRY", scod_Country);
         }
         [WebMethod(Description = "Metodo para  llenar departamento segun país seleccionado")]
         public DataTable Get_llenar_ComboDpto(string sCODCOUNTRY)
         {
             Conexion oCoon = new Conexion();
-
-            DataTable dtGet_llenar_ComboDpto = null;
-            dtGet_llenar_ComboDpto = oCoon.ejecutarDataTable("UP_WEBSIGE_LLENACOMBOSCOUNTRY", sCODCOUNTRY);
-            return dtGet_llenar_ComboDpto;
+            return oCoon.ejecutarDataTable("UP_WEBSIGE_LLENACOMBOSCOUNTRY", sCODCOUNTRY);
         }
         /// <summary>
         /// Descripción : se agrega consulta de país de usuario.
@@ -335,10 +250,7 @@ namespace Facade_Planning
         public DataTable ConsultaPaísdeUsuario(int iPerson_id)
         {
             Conexion oCoon = new Conexion();
-
-            DataTable ConsultaPaísdeUsuario = null;
-            ConsultaPaísdeUsuario = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_CONSULTAPAISDEUSUARIO", iPerson_id);
-            return ConsultaPaísdeUsuario;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_CONSULTAPAISDEUSUARIO", iPerson_id);
         }
         /// <summary>
         /// Descripción : se agrega metodo para llenar combo de servicio segun usuario en el maestro de Asignación de informe por usuario.
@@ -351,10 +263,7 @@ namespace Facade_Planning
         public DataTable LlenaComServicio(string sCODCOUNTRY)
         {
             Conexion oCoon = new Conexion();
-
-            DataTable LlenaComServicio = null;
-            LlenaComServicio = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOSERVICIOPORUSUARIO", sCODCOUNTRY);
-            return LlenaComServicio;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOSERVICIOPORUSUARIO", sCODCOUNTRY);
         }
 
         /// <summary>
@@ -372,9 +281,7 @@ namespace Facade_Planning
         public DataSet ConsultaInformedeInfoUsu(int iCompany_id, int iPerson_id, string scod_Channel, int icod_Strategy, int iid_userinforme)
         {
             Conexion oCoon = new Conexion();
-            DataSet ConsultaInformedeInfoUsu = null;
-            ConsultaInformedeInfoUsu = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_CONSULTAINFORMES_CLIE_USERS_REPORTS", iCompany_id, iPerson_id, scod_Channel, icod_Strategy, iid_userinforme);
-            return ConsultaInformedeInfoUsu;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_CONSULTAINFORMES_CLIE_USERS_REPORTS", iCompany_id, iPerson_id, scod_Channel, icod_Strategy, iid_userinforme);
         }
 
         /// <summary>
@@ -389,10 +296,7 @@ namespace Facade_Planning
         public DataTable LlenaComboSubCategoriaPresent(string sidProductCategory)
         {
             Conexion oCoon = new Conexion();
-
-            DataTable LlenaComSubcategoria = null;
-            LlenaComSubcategoria = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOSUBCATEGORIAPRESENT", sidProductCategory);
-            return LlenaComSubcategoria;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOSUBCATEGORIAPRESENT", sidProductCategory);
         }
         /// <summary>
         /// creado:Consulta llena combo de cliente en maestro de producto
@@ -404,10 +308,7 @@ namespace Facade_Planning
         public DataTable LlenaComboClienteenProducto(int iidBrand)
         {
             Conexion oCoon = new Conexion();
-
-            DataTable LlenaComCliente = null;
-            LlenaComCliente = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOCLIENTEPRODUCT", iidBrand);
-            return LlenaComCliente;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOCLIENTEPRODUCT", iidBrand);
         }
         /// <summary>
         /// creado:Consulta llena combo de cliente en maestro de producto
@@ -420,10 +321,7 @@ namespace Facade_Planning
         public DataTable LlenaComboPresentProduct(string sidProductCategory, int iidBrand)
         {
             Conexion oCoon = new Conexion();
-
-            DataTable LlenaCompresentacion = null;
-            LlenaCompresentacion = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOPRESENTPRODUCT", sidProductCategory, iidBrand);
-            return LlenaCompresentacion;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOPRESENTPRODUCT", sidProductCategory, iidBrand);
         }
         /// <summary>
         /// llena todos los combos del maestro de productos ancla.
@@ -439,9 +337,7 @@ namespace Facade_Planning
         public DataSet llenaCombosPAncla(int iCompany_id, string sid_ProductCategory, long lid_Subcategory, int iid_Brand, string scod_Product)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenacombosAncla = null;
-            llenacombosAncla = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSPRODUCANCLA", iCompany_id, sid_ProductCategory, lid_Subcategory, iid_Brand, scod_Product);
-            return llenacombosAncla;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSPRODUCANCLA", iCompany_id, sid_ProductCategory, lid_Subcategory, iid_Brand, scod_Product);
         }
         /// <summary>
         /// llena combos de consulta del maestro productos ancla
@@ -454,9 +350,7 @@ namespace Facade_Planning
         public DataSet llenaConsultaCombosPAncla(int iCompany_id)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenacombosBuscarAncla = null;
-            llenacombosBuscarAncla = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSCONSULTASPRODUCTANCLA", iCompany_id);
-            return llenacombosBuscarAncla;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSCONSULTASPRODUCTANCLA", iCompany_id);
         }
 
         /// <summary>
@@ -471,9 +365,8 @@ namespace Facade_Planning
         public DataSet llenaCombosSector(int iCompany_id)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenacombosSector = null;
-            llenacombosSector = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMALLAS", iCompany_id);
-            return llenacombosSector;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMALLAS", iCompany_id);
+            
         }
       /// <summary>
       /// Metodo para llenar conmbos filtro para llenar Puntos de Venta en el maestro de relación de Puntos de venta a cliente.
@@ -488,9 +381,7 @@ namespace Facade_Planning
         public DataSet llenaCombosPDVCliente(int iCompany_id, string scod_country , string scod_channel , int iidNodeComType,  string sNodeCommercial)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenaCombosPDVCliente = null;
-            llenaCombosPDVCliente = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSPDVCLIENTE",iCompany_id, scod_country, scod_channel, iidNodeComType, sNodeCommercial);
-            return llenaCombosPDVCliente;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSPDVCLIENTE", iCompany_id, scod_country, scod_channel, iidNodeComType, sNodeCommercial);
         }
 
         /// <summary>
@@ -507,9 +398,8 @@ namespace Facade_Planning
         public DataSet llenaPDVClienteConsulta(int iCompany_id, string scod_country, string scod_channel, int iidNodeComType, string sNodeCommercial)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenaPDVClienteConsulta = null;
-            llenaPDVClienteConsulta = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACONSULAPDVCLIENTE", iCompany_id, scod_country, scod_channel, iidNodeComType, sNodeCommercial);
-            return llenaPDVClienteConsulta;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACONSULAPDVCLIENTE", iCompany_id, scod_country, scod_channel, iidNodeComType, sNodeCommercial);
+        
         }
         /// <summary>
         /// llena combos de check de informes por cod_Channel, company_id y Cod_Strategy
@@ -523,9 +413,8 @@ namespace Facade_Planning
         public DataSet llenaCheckInformes(int iCompany_id, string scod_channel, int icod_Strategy)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenaCheckInformes= null;
-            llenaCheckInformes = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACHECKINFORMEUSERREPORT", iCompany_id, scod_channel, icod_Strategy);
-            return llenaCheckInformes;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACHECKINFORMEUSERREPORT", iCompany_id, scod_channel, icod_Strategy);
+            
         }
         /// <summary>
         /// Consulta llena combo de usuario por cliente en el maestro de asignación de informes a usuario
@@ -537,10 +426,8 @@ namespace Facade_Planning
         public DataTable LlenaComboUsuarioXCliente(int iCompany_id)
         {
             Conexion oCoon = new Conexion();
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOUSUARIOXCLIENTE", iCompany_id);
 
-            DataTable LlenaComboUsuarioXCliente = null;
-            LlenaComboUsuarioXCliente = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOUSUARIOXCLIENTE", iCompany_id);
-            return LlenaComboUsuarioXCliente;
         }
         /// <summary>
         /// Consulta id de la tambla asignación de informes a usuario para insertar ciudades por registro
@@ -552,10 +439,7 @@ namespace Facade_Planning
         public DataTable ConsultaUltimoiddeClieInfoUser()
         {
             Conexion oCoon = new Conexion();
-
-            DataTable consultaidClieUserReport= null;
-            consultaidClieUserReport = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_CONSULTA_ID_USERINFORME");
-            return consultaidClieUserReport;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_CONSULTA_ID_USERINFORME");
         }
         /// <summary>
         /// LLENA LOS CANALES POR CLIENTE en maestro de asignación de informes a usuario
@@ -567,10 +451,7 @@ namespace Facade_Planning
         public DataTable LLenacomboCanalporCliente(int iCompany_id)
         {
             Conexion oCoon = new Conexion();
-
-            DataTable LLenacomboCanalporCliente = null;          
-            LLenacomboCanalporCliente = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACANALXCLIENTE",  iCompany_id);
-            return LLenacomboCanalporCliente;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACANALXCLIENTE", iCompany_id);
         }
         /// <summary>
         /// llena combos de consulta Cliente, Usuario, Canal y servicio en maestro de asignación informes a usuarios
@@ -584,9 +465,7 @@ namespace Facade_Planning
         public DataSet llenaCombosConsultaInfoUser(int iCompany_id, int iPerson_id, string scod_channel)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenaCombosConsultaInfoUser = null;
-            llenaCombosConsultaInfoUser = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSCONSULTASASIGNACIONREPORTUSERS", iCompany_id, iPerson_id, scod_channel);
-            return llenaCombosConsultaInfoUser;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSCONSULTASASIGNACIONREPORTUSERS", iCompany_id, iPerson_id, scod_channel);
         }
         /// <summary>
         /// Consulta ciudades de Asignación de informe a Usuario
@@ -601,9 +480,8 @@ namespace Facade_Planning
         public DataSet ConsultaCiudadesdeInfoUsu(int iCompany_id,  int iPerson_id, string scod_Channel,int icod_Strategy)
         {
             Conexion oCoon = new Conexion();
-            DataSet ConsultaCiudadesdeInfoUsu = null;
-            ConsultaCiudadesdeInfoUsu = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_CONSULTACIUDADES_CITY_USERS_REPORTS", iCompany_id, iPerson_id, scod_Channel, icod_Strategy);
-            return ConsultaCiudadesdeInfoUsu;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_CONSULTACIUDADES_CITY_USERS_REPORTS", iCompany_id, iPerson_id, scod_Channel, icod_Strategy);
+            
         }
         /// <summary>
         /// LLENA combo de marca en consulta de maestro familia
@@ -616,10 +494,7 @@ namespace Facade_Planning
         public DataSet LLenacomboBuscarMarcaFamily(int iCompany_id, string sid_ProductCategory)
         {
             Conexion oCoon = new Conexion();
-
-            DataSet LLenacomboBMarcaFamily = null;
-            LLenacomboBMarcaFamily = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOMARCABUSCARFAMILY", iCompany_id, sid_ProductCategory);
-            return LLenacomboBMarcaFamily;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOMARCABUSCARFAMILY", iCompany_id, sid_ProductCategory);
         }
         /// <summary>
         /// llena combos de maestro asignación de cobertura
@@ -632,9 +507,8 @@ namespace Facade_Planning
         public DataSet llenaCombosAsignacionCobertura(int iCompany_id, int iPerson_id, string scod_Channel, int icod_Strategy, int iReport_Id)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenaCombosAsignacionCobertura = null;
-            llenaCombosAsignacionCobertura = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSASIGNARCOBERTURA", iCompany_id, iPerson_id, scod_Channel, icod_Strategy, iReport_Id);
-            return llenaCombosAsignacionCobertura;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSASIGNARCOBERTURA", iCompany_id, iPerson_id, scod_Channel, icod_Strategy, iReport_Id);
+            
         }
         /// <summary>
         /// llena combos de consulta de maestro de asignación de cobertura
@@ -650,9 +524,7 @@ namespace Facade_Planning
         public DataSet llenaCombosConsultaAsignacionCobertura(int iCompany_id, int iPerson_id, string scod_Channel, int icod_Strategy, int iReport_Id)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenaCombosConsultaAsignacionCobertura = null;
-            llenaCombosConsultaAsignacionCobertura = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSCONSULTAASIGNARCOBERTURA", iCompany_id, iPerson_id, scod_Channel, icod_Strategy, iReport_Id);
-            return llenaCombosConsultaAsignacionCobertura;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSCONSULTAASIGNARCOBERTURA", iCompany_id, iPerson_id, scod_Channel, icod_Strategy, iReport_Id);
         }
         /// <summary>
         /// llena combos de maestro asignación de Reporte a Oficinas
@@ -664,9 +536,7 @@ namespace Facade_Planning
         public DataSet llenaCombosAsignacionReportOficina(int iCompany_id)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenaCombosAsignacionReportOficina = null;
-            llenaCombosAsignacionReportOficina = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSASIGNAROFICINASAREPORTES", iCompany_id);
-            return llenaCombosAsignacionReportOficina;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSASIGNAROFICINASAREPORTES", iCompany_id);
         }
         /// <summary>
         /// llena combos  de consulta de maestro asignación de Reporte a Oficinas
@@ -678,9 +548,7 @@ namespace Facade_Planning
         public DataSet llenaCombosConsultaAsignacionReportOficina(int iCompany_id)
         {
             Conexion oCoon = new Conexion();
-            DataSet llenaCombosConsultaAsignacionReportOficina = null;
-            llenaCombosConsultaAsignacionReportOficina = oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSCONSULTA_ASIGNARREPORTOFICINA", iCompany_id);
-            return llenaCombosConsultaAsignacionReportOficina;
+            return oCoon.ejecutarDataSet("UP_WEBXPLORA_AD_LLENACOMBOSCONSULTA_ASIGNARREPORTOFICINA", iCompany_id);
         }
         /// <summary>
         /// llena las categorias en la consulta del maestro de Marca
@@ -691,10 +559,7 @@ namespace Facade_Planning
         public DataTable LLenacomboCategoriaConsultaMarca()
         {
             Conexion oCoon = new Conexion();
-
-            DataTable LLenacomboCategoriaConsultaMarca = null;
-            LLenacomboCategoriaConsultaMarca = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOBUSCARCATEGORIA");
-            return LLenacomboCategoriaConsultaMarca;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOBUSCARCATEGORIA");
         }
         /// <summary>
         /// llena combo de marca por categoria.
@@ -705,10 +570,7 @@ namespace Facade_Planning
         public DataTable LLenacomboMarcaporCategoria(string  sid_ProductCategory)
         {
             Conexion oCoon = new Conexion();
-
-            DataTable LLenacomboMarcaporCategoria = null;
-            LLenacomboMarcaporCategoria = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOMARCASEGUNCATEGORIA", sid_ProductCategory);
-            return LLenacomboMarcaporCategoria;
+            return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOMARCASEGUNCATEGORIA", sid_ProductCategory);
         }
         /// <summary>
         /// Consulta id_Lavel para realizar la insericón en la taba AD_PErson_Modulo
@@ -719,10 +581,7 @@ namespace Facade_Planning
          public DataTable ConsultaUltimoiddeNivel()
          {
              Conexion oCoon = new Conexion();
-
-             DataTable ConsultaUltimoiddeNivel = null;
-             ConsultaUltimoiddeNivel = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_CONSULTA_ID_LEVEL");
-             return ConsultaUltimoiddeNivel;
+             return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_CONSULTA_ID_LEVEL");
          }
         /// <summary>
          /// llena combo de cosnulta en el maestro de nivel
@@ -733,10 +592,7 @@ namespace Facade_Planning
          public DataTable ConsultallenarcomboNivel()
          {
              Conexion oCoon = new Conexion();
-
-             DataTable ConsultallenarcomboNivel = null;
-             ConsultallenarcomboNivel = oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOCONSULTANIVEL");
-             return ConsultallenarcomboNivel;
+             return oCoon.ejecutarDataTable("UP_WEBXPLORA_AD_LLENACOMBOCONSULTANIVEL");
          }
         /// <summary>
          /// Obtine NodeComercial por id_planning
@@ -746,15 +602,8 @@ namespace Facade_Planning
          [WebMethod(Description = "Obtine NodeComercial por id_planning")]
          public List<ENodeComercial> Get_NodeComercialBy_idPlanning(string sidPlanning)
          {
-             try
-             {
-                 NodeComercial oNodeComercial = new NodeComercial();
-                 return oNodeComercial.Get_NodeComercialBy_idPlanning(sidPlanning);
-             }
-             catch (Exception)
-             {
-                 return null;
-             }
+             NodeComercial oNodeComercial = new NodeComercial();
+             return oNodeComercial.Get_NodeComercialBy_idPlanning(sidPlanning);
          }
 
          /// <summary>
@@ -765,17 +614,8 @@ namespace Facade_Planning
          [WebMethod(Description = "Obtine lista de tipos de material POP")]
          public DataTable get_tipo_material_pop()
          {
-             try
-             {
-                Conexion oCoon = new Conexion();
-                DataTable get_tipo_material_pop = null;
-                get_tipo_material_pop = oCoon.ejecutarDataTable("UP_WEBEXPLORA_AD_OBTENER_TIPOMATERIALPOP");
-                return get_tipo_material_pop;
-             }
-             catch (Exception)
-             {
-                 return null;
-             }
+             Conexion oCoon = new Conexion();
+             return oCoon.ejecutarDataTable("UP_WEBEXPLORA_AD_OBTENER_TIPOMATERIALPOP");
          }
        
     }
