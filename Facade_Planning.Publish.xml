@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\psalas\Desktop\Publicado_Servicios_XXX" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Lucky.CFG.pdb" publishTime="06/22/2018 09:19:36" />
+    <file relUrl="Facade_MPlanning.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="PageLoader.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="bin/Lucky.Data.dll" publishTime="06/22/2018 09:53:22" />
+    <file relUrl="bin/Facade_Planning.dll" publishTime="09/17/2018 02:01:50" />
+    <file relUrl="bin/Telerik.Web.UI.dll" publishTime="08/25/2009 17:07:46" />
+    <file relUrl="Facade_Proceso_Supervisor.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="Facade_Proceso_Planning.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="Facade_Proceso_Cliente.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="bin/Facade_Planning.pdb" publishTime="09/17/2018 02:01:50" />
+    <file relUrl="Facade_Info_EasyWin_for_SIGE.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="Facade_Gestion_Informacion.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="bin/Newtonsoft.Json.dll" publishTime="06/29/2011 23:45:48" />
+    <file relUrl="bin/Lucky.Entity.pdb" publishTime="06/22/2018 09:19:34" />
+    <file relUrl="bin/Lucky.CFG.dll" publishTime="06/22/2018 09:19:36" />
+    <file relUrl="Facade_Search.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="Facade_Proceso_Operativo.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="Fotos.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="bin/Lucky.Data.pdb" publishTime="06/22/2018 09:53:22" />
+    <file relUrl="Facade_Procesos_Administrativos.asmx" publishTime="03/07/2012 16:20:07" />
+    <file relUrl="bin/Lucky.Business.dll" publishTime="06/22/2018 09:53:24" />
+    <file relUrl="bin/Lucky.Entity.dll" publishTime="06/22/2018 09:19:34" />
+    <file relUrl="bin/Microsoft.ApplicationBlocks.Data.dll" publishTime="07/13/2010 12:52:24" />
+    <file relUrl="bin/LuckyMer.Contracts.dll" publishTime="03/31/2012 20:52:38" />
+    <file relUrl="bin/Lucky.Business.pdb" publishTime="06/22/2018 09:53:24" />
+    <file relUrl="web.config" publishTime="06/04/2015 06:45:01" />
+  </publishProfile>
+</publishData>
